@@ -9,6 +9,8 @@ import { MainComponent } from './main/main.component';
 import { GetCompanyComponent } from './get-company/get-company.component';
 import { CityDevicesComponent } from './city-devices/city-devices.component';
 import { FooterComponent } from './footer/footer.component';
+import { routes} from './app.routes';
+
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    routes
   ],
   providers: [],
   bootstrap: [AppComponent]
