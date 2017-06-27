@@ -4,3 +4,25 @@
         <h4>Gets the company by the id you enter from the database</h4>
     </div>
 </div>
+<div class="row">
+    <div class="columns">
+        <form #form="ngForm" (ngSubmit)="getCompany(form.value)">
+            <input type="text" placeholder="profile id" name="id" [(ngModel)]="id">
+            <button id="btn" type="submit">Get Result!</button>
+        </form>
+    </div>
+    <div class="columns">
+        <ul id="companies-list" *ngIf="company">Details:
+            <li>Name: {{company.name}}</li>
+            <li>ID: {{company.Profile}}</li>
+            <li>Classification: {{company.classification}}</li>
+            <li>Number of devices: {{company.Quantity_of_devices}}</li>
+            <li>Monthly Amount: {{company.Monthly_amount}}</li>
+            <li *ngFor="let branch of company.Branches">Branche:
+                <p>City ID: {{branch.id}}</p>
+                <p>City: {{branch.city}}</p>
+                <P>Address: {{branch.address}}</P>
+            </li>
+        </ul>
+    </div>
+</div>

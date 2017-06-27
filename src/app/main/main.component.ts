@@ -18,8 +18,8 @@ export class MainComponent implements OnInit {
 
       this.businessService.getAllNames()
           .subscribe(companies => {
-              this.companyNames = companies;
-              console.log(this.companyNames);
+              this.companyNames = companies[Object.keys(companies)[0]];
+              //console.log(this.companyNames);
           });
 
   }

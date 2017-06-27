@@ -4,3 +4,10 @@
         <h4>Gets all the companies that are in the database</h4>
     </div>
 </div>
+<div class="row">
+    <div class="columns">
+    <ul id=companies-list>All Companies:
+        <li *ngFor="let company of companyNames">{{company}}</li>
+    </ul>
+    </div>
+</div>

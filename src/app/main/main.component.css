@@ -1,0 +1,16 @@
+#companies-list {
+    margin: 20px 0 20px 30px;
+    color:#1ad39a;
+}
+
+ul{
+    list-style-type: none;
+    margin:0;
+}
+
+ul li {
+    color: #fff;
+    width: 90%;
+    padding: 13px;
+    text-indent: 30px;
+}

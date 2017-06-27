@@ -1,0 +1,30 @@
+input {
+    width:90%;
+    border:none;
+    padding: 25px;
+    margin-top: 2em;
+
+}
+
+#btn {
+    display:block;
+    width:90%;
+    background: #1ad39a;
+    padding: 15px 0;
+    margin-top:2em;
+    color: #fff;
+    font-weight: bold;
+}
+
+ul{
+    list-style-type: none;
+    margin: 20px 0 20px 30px;
+    color: #1ad39a;
+}
+
+ul li {
+    color: #fff;
+    width: 90%;
+    padding: 13px;
+    text-indent: 30px;
+}

@@ -7,20 +7,22 @@ import { BusinessService } from './../services/business.service';
   styleUrls: ['./get-company.component.css'],
   providers: [BusinessService]
 })
-export class GetCompanyComponent implements OnInit {
+export class GetCompanyComponent {
 
   constructor(private businessService:BusinessService) { }
   //var
-  aCompany:any;
+  company:any;
+  id:number;
 
-  ngOnInit() {
+  getCompany(value:any) {
 
       //calling the getCompany method from the service with the company id
-      this.businessService.getCompany(45)
+      this.businessService.getCompany(value.id)
            .subscribe(company => {
-               this.aCompany = company;
-               console.log(this.aCompany);
+               this.company = company[Object.keys(company)[0]];
+               console.log(this.company.Branches[0]);
            });
+       this.id = null;
   }
 
 }
