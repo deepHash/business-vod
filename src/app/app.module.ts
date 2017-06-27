@@ -8,7 +8,6 @@ import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
 import { GetCompanyComponent } from './get-company/get-company.component';
 import { CityDevicesComponent } from './city-devices/city-devices.component';
-import { FooterComponent } from './footer/footer.component';
 import { routes} from './app.routes';
 
 
@@ -18,8 +17,7 @@ import { routes} from './app.routes';
     HeaderComponent,
     MainComponent,
     GetCompanyComponent,
-    CityDevicesComponent,
-    FooterComponent
+    CityDevicesComponent
   ],
   imports: [
     BrowserModule,

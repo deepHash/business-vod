@@ -15,12 +15,14 @@ export class MainComponent implements OnInit {
   constructor(private businessService: BusinessService ) { this.companyNames = ''; }
 
   ngOnInit() {
-
-      this.businessService.getAllNames()
+      if (!this.companyNames){
+          this.businessService.getAllNames()
           .subscribe(companies => {
               this.companyNames = companies[Object.keys(companies)[0]];
               //console.log(this.companyNames);
-          });
+          });          
+      }
+
 
   }
 
