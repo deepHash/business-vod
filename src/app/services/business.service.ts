@@ -19,7 +19,7 @@ export class BusinessService {
     }
 
     getCompanyByCityDevices(city, devices) {
-        return this.http.get(`${this.apiUrl}/getCompanyByCityDevices/${city}/${devices}`)
+        return this.http.get(`${this.apiUrl}/getCompanyByCity&Devices/${city}/${devices}`)
             .map(res => res.json());
     }
 }

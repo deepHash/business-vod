@@ -7,19 +7,26 @@ import { BusinessService } from './../services/business.service';
   styleUrls: ['./city-devices.component.css'],
   providers: [BusinessService]
 })
-export class CityDevicesComponent implements OnInit {
+export class CityDevicesComponent {
   //vars
-  companyNames:any;
+  companies:any;
+  city:string = '';
+  devices:string = '';
 
   constructor(private businessService: BusinessService) { }
 
-  ngOnInit() {
-
-      this.businessService.getCompanyByCityDevices("Haifa", 10)
+  getCityDevice(value:any) {
+      this.businessService.getCompanyByCityDevices(value.city, value.devices)
           .subscribe(companies => {
-              this.companyNames = companies;
-              console.log(this.companyNames);
-          });      
+              //gets the array object from the complicated key naming.... :<
+              this.companies = companies[Object.keys(companies)[0]];
+              console.log(this.companies);
+          });
+       this.city = '';
+       this.devices = '';         
   }
+
+
+   
 
 }

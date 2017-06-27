@@ -12,7 +12,7 @@ export class MainComponent implements OnInit {
   //
   companyNames:any;
 
-  constructor(private businessService: BusinessService ) { }
+  constructor(private businessService: BusinessService ) { this.companyNames = ''; }
 
   ngOnInit() {
 

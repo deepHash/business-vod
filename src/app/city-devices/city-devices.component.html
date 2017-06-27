@@ -1,3 +1,26 @@
-<p>
-  city-devices works!
-</p>
+<div class="row">
+    <div class="columns large-12">
+        <h1>Get All Companies by the city and devices</h1>
+        <h4>Gets all the companies by the city value and the devices amount 
+            that you enter from the database
+        </h4>
+    </div>
+</div>
+<div class="row">
+    <div class="columns"> 
+        <form #form="ngForm" (ngSubmit)="getCityDevice(form.value)">
+            <input type="text" placeholder="City" name="city" [(ngModel)]="city">
+            <input type="text" placeholder="Number of devices" name="devices" 
+                    [(ngModel)]="devices">
+            <button id="btn" type="submit">Get Result!</button>
+        </form>
+    </div>
+    <div class="columns">
+        <p id="results" *ngIf="companies">Companies:</p>
+        <ul id="companies-list">
+            <li *ngFor="let company of companies">
+                <p> {{company}} </p>
+            </li>
+        </ul>
+    </div>
+</div>
